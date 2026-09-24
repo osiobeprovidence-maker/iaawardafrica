@@ -1,0 +1,7 @@
+{
+  "name": "Iconic Awards Africa (IAA)",
+  "description": "Official platform for Iconic Awards Africa (IAA) featuring the 7th Edition 'The African Cultural Fashion Edition', real-time public voting with Paystack & Flutterwave, live leaderboards, event tickets, and comprehensive admin suite.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

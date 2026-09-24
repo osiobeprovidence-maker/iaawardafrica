@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2A01F"/>
+      <stop offset="50%" stop-color="#C9971C"/>
+      <stop offset="100%" stop-color="#996E0D"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8471C"/>
+      <stop offset="100%" stop-color="#BA300B"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark Emblem Base -->
+  <circle cx="60" cy="60" r="56" fill="#0B0B0B" stroke="url(#goldGrad)" stroke-width="3"/>
+  <!-- African Geometric Pattern Ring -->
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#F2A01F" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+  <!-- Laurel / Crown Motif -->
+  <path d="M30 68 C 24 50 36 34 60 26 C 84 34 96 50 90 68 C 84 84 68 94 60 94 C 52 94 36 84 30 68 Z" fill="none" stroke="url(#goldGrad)" stroke-width="2.5"/>
+  <!-- Star Motif -->
+  <polygon points="60,20 64,30 74,31 66,38 69,48 60,42 51,48 54,38 46,31 56,30" fill="url(#orangeGrad)"/>
+  <!-- Central IAA Monogram -->
+  <text x="60" y="68" font-family="'Playfair Display', serif" font-weight="900" font-size="24" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="2">IAA</text>
+  <!-- Subtitle Ribbon -->
+  <text x="60" y="82" font-family="'Inter', sans-serif" font-weight="700" font-size="6.5" fill="#FAF8F4" text-anchor="middle" letter-spacing="2">ICONIC AWARDS</text>
+</svg>

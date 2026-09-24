@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #0B0B0B;
+    background-color: #FAF8F4;
+    overflow-x: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* ========================================================
+   HIGH-CONTRAST DARK MODE GLOBAL ADAPTATIONS
+   ======================================================== */
+html.dark body,
+body.dark,
+[data-theme="dark"] {
+  background-color: #070707 !important;
+  color: #F3F4F6 !important;
+}
+
+/* Light Pattern vs Dark Pattern */
+.bg-pattern-african {
+  background-color: #0B0B0B;
+  background-image: radial-gradient(rgba(242, 160, 31, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(232, 71, 28, 0.05) 1px, #0B0B0B 1px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+.bg-pattern-light {
+  background-color: #FAF8F4;
+  background-image: radial-gradient(rgba(201, 151, 28, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+html.dark .bg-pattern-light,
+[data-theme="dark"] .bg-pattern-light {
+  background-color: #070707 !important;
+  background-image: radial-gradient(rgba(242, 160, 31, 0.12) 1px, transparent 1px) !important;
+}
+
+/* Dark Mode Surface Overrides for High Contrast */
+html.dark .bg-\[\#FAF8F4\],
+[data-theme="dark"] .bg-\[\#FAF8F4\] {
+  background-color: #070707 !important;
+}
+
+html.dark .text-\[\#0B0B0B\],
+[data-theme="dark"] .text-\[\#0B0B0B\] {
+  color: #FFFFFF !important;
+}
+
+html.dark .bg-white,
+[data-theme="dark"] .bg-white {
+  background-color: #121215 !important;
+  border-color: #27272A !important;
+}
+
+html.dark .bg-neutral-50,
+[data-theme="dark"] .bg-neutral-50 {
+  background-color: #16161A !important;
+  border-color: #27272A !important;
+}
+
+html.dark .bg-neutral-100,
+[data-theme="dark"] .bg-neutral-100 {
+  background-color: #1E1E24 !important;
+  color: #F3F4F6 !important;
+}
+
+html.dark .bg-neutral-200,
+[data-theme="dark"] .bg-neutral-200 {
+  background-color: #2A2A32 !important;
+}
+
+html.dark .text-neutral-900,
+[data-theme="dark"] .text-neutral-900 {
+  color: #FFFFFF !important;
+}
+
+html.dark .text-neutral-800,
+[data-theme="dark"] .text-neutral-800 {
+  color: #F3F4F6 !important;
+}
+
+html.dark .text-neutral-700,
+[data-theme="dark"] .text-neutral-700 {
+  color: #E5E7EB !important;
+}
+
+html.dark .text-neutral-600,
+[data-theme="dark"] .text-neutral-600 {
+  color: #D1D5DB !important;
+}
+
+html.dark .text-neutral-500,
+[data-theme="dark"] .text-neutral-500 {
+  color: #9CA3AF !important;
+}
+
+html.dark .border-neutral-200,
+[data-theme="dark"] .border-neutral-200 {
+  border-color: #27272A !important;
+}
+
+html.dark .border-neutral-300,
+[data-theme="dark"] .border-neutral-300 {
+  border-color: #3F3F46 !important;
+}
+
+html.dark .border-neutral-100,
+[data-theme="dark"] .border-neutral-100 {
+  border-color: #222228 !important;
+}
+
+/* Form controls in high-contrast dark mode */
+html.dark input:not([type="color"]):not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+html.dark select,
+html.dark textarea,
+[data-theme="dark"] input:not([type="color"]):not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: #141418 !important;
+  color: #FFFFFF !important;
+  border-color: #3F3F46 !important;
+}
+
+html.dark input:focus,
+html.dark select:focus,
+html.dark textarea:focus,
+[data-theme="dark"] input:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] textarea:focus {
+  border-color: #F2A01F !important;
+  box-shadow: 0 0 0 2px rgba(242, 160, 31, 0.25) !important;
+}
+
+/* Modals & Dialog overlays in high-contrast dark mode */
+html.dark .shadow-sm,
+html.dark .shadow-md,
+html.dark .shadow-lg,
+html.dark .shadow-xl,
+[data-theme="dark"] .shadow-sm,
+[data-theme="dark"] .shadow-md,
+[data-theme="dark"] .shadow-lg,
+[data-theme="dark"] .shadow-xl {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Kente Accent Stripe */
+.kente-stripe {
+  background: repeating-linear-gradient(
+    90deg,
+    #E8471C,
+    #E8471C 20px,
+    #F2A01F 20px,
+    #F2A01F 40px,
+    #C9971C 40px,
+    #C9971C 60px,
+    #0B0B0B 60px,
+    #0B0B0B 80px
+  );
+}
+
+.kente-border-b {
+  position: relative;
+}
+.kente-border-b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    #E8471C 0,
+    #E8471C 16px,
+    #F2A01F 16px,
+    #F2A01F 32px,
+    #C9971C 32px,
+    #C9971C 48px,
+    #0B0B0B 48px,
+    #0B0B0B 64px
+  );
+}
+
+/* Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F2A01F 0%, #FAF8F4 50%, #C9971C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-metallic {
+  background: linear-gradient(135deg, #F2A01F 0%, #C9971C 60%, #996E0D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* High contrast gold glow for dark mode */
+html.dark .text-gold-gradient,
+[data-theme="dark"] .text-gold-gradient {
+  background: linear-gradient(135deg, #FBBF24 0%, #FFFFFF 50%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0B0B;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9971C;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E8471C;
+}
